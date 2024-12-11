@@ -3,45 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자기소개 페이지</title>
+    <title>introduction</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="ansanlogo.png" alt="안산대학교 로고">
+            <img src="img/ansanlogo.png" alt="안산대학교 로고">
         </div>
-        <h1>안녕하세요, 저는 [이름]입니다</h1>
+        <h1>안녕하세요, 저는 leeyj 입니다.</h1>
+        <p>"Turning Ideas into Interactive Experiences"</p>
     </header>
+    
     <section class="introduction">
-        <p>저는 안산대학교 컴퓨터공학과 3학년으로 재학 중입니다. 현재 대학일자리플러스센터에서 홍보 디자인 및 사무행정 업무를 맡고 있습니다.</p>
-        <div class="mascots">
-            <img src="안이.png" alt="안이" class="mascot">
-            <img src="산이.png" alt="산이" class="mascot">
-        </div>
-        <p>저의 프로젝트와 포트폴리오는 아래에서 확인하실 수 있습니다.</p>
+        <h2>About Me</h2>
+        <div class="icons">
+            <!-- profile 아이콘 -->
+            <img src="img/profile_icon.png" alt="Profile 아이콘" class="icon" id="icon-a">
+            <!-- namelogo 아이콘 -->
+            <img src="img/namelogo_icon.png" alt="Name Logo 아이콘" class="icon" id="icon-b">
+          </div>
+        
+          <!-- profile 이미지 확대 -->
+          <div id="overlay-a" class="overlay">
+            <span class="close-btn" id="close-a">&times;</span>
+            <img src="img/profile.png" alt="Profile 이미지" class="expanded-image">
+          </div>
+        
+          <!-- namelogo 이미지 확대 -->
+          <div id="overlay-b" class="overlay">
+            <span class="close-btn" id="close-b">&times;</span>
+            <img src="img/namelogo.png" alt="Name Logo 이미지" class="expanded-image">
+          </div>
+        
+          <script src="script.js"></script>
+        <p>저는 안산대학교 컴퓨터공학과 졸업 예정자로, 백엔드 기술을 배우며 탄탄한 기초를 쌓아왔습니다. 하지만 프론트엔드 개발의 매력에 빠져 이 분야로 커리어를 시작하고자 합니다. 사용자 경험을 최우선으로 생각하며, 아름답고 직관적인 인터페이스를 만드는 것을 목표로 하고 있습니다.</p>
     </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <!-- Frontend image instead of text -->
+                <img src="img/front.png" alt="Frontend Skills" class="skill-image" onclick="openModal('front.png')" />
+            </div>
+            <div class="skill-category">
+                <h3>Backend</h3>
+                <!-- Backend image instead of text -->
+                <img src="img/back.png" alt="Backend Skills" class="skill-image" onclick="openModal('back.png')" />
+            </div>
+            <div class="skill-category">
+                <h3>Tools</h3>
+                <!-- Tools image instead of text -->
+                <img src="img/tool.png" alt="Tools Skills" class="skill-image" onclick="openModal('tool.png')" />
+            </div>
+            <div class="skill-category">
+                <h3>Design</h3>
+                <!-- Design image instead of text -->
+                <img src="img/design.png" alt="Design Skills" class="skill-image" onclick="openModal('design.png')" />
+            </div>
+        </div>
+    </section>
+
     <section class="projects">
-        <h2>프로젝트 및 작품</h2>
+        <h2>Projects</h2>
         <ul>
-            <li>1학년 프로젝트: [프로젝트명]</li>
-            <li>2학년 프로젝트: [프로젝트명]</li>
-            <li>3학년 프로젝트: [프로젝트명]</li>
+            <li><strong>개인 포트폴리오 웹사이트</strong>: 반응형 포트폴리오 개발 (HTML, CSS, JavaScript, React.js)</li>
+            <li><strong>코딩</strong>: 플랫폼 제작</li>
+            <li><strong>앱</strong>: API를 활용한 앱 (HTML, CSS, JavaScript)</li>
         </ul>
     </section>
+
     <section class="portfolio">
-        <h2>포트폴리오</h2>
+        <h2>Portfolio</h2>
         <div class="portfolio-images">
-            <img src="포스터1.jpg" alt="포스터1">
-            <img src="포스터2.jpg" alt="포스터2">
-            <img src="메모지.jpg" alt="메모지">
-            <img src="리플렛.jpg" alt="리플렛">
+            <img src="img/포스터.png" alt="프로젝트 1">
+            <img src="img/채용1.png" alt="프로젝트 2">
+            <img src="img/리플렛1.png" alt="프로젝트 3">
         </div>
-        <p><a href="https://www.example.com" target="_blank">개인 블로그 바로가기</a></p>
+        <p><a href="https://github.com/yourgithub" target="_blank">GitHub 바로가기</a></p>
     </section>
+
     <footer>
-        <p>연락처: [연락처]</p>
-        <p>대학일자리플러스센터 업무 링크: <a href="https://www.example.com" target="_blank">센터 홈페이지</a></p>
+        <p>연락처: [your.email@example.com]</p>
+        <p>GitHub: <a href="https://github.com/iamleeyj" target="_blank">github.com/yourgithub</a></p>
+        <p>LinkedIn: <a href="https://github.com/iamleeyj" target="_blank">linkedin.com/in/yourprofile</a></p>
     </footer>
 </body>
 </html>
