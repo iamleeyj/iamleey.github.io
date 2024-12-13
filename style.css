@@ -4,20 +4,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* 모바일에서 웹 버전 디자인을 고정 */
-@media only screen and (max-width: 768px) {
-    body {
-        width: 100%; /* 모바일 화면에서 화면 크기를 100%로 고정 */
-        overflow-x: auto; /* 가로 스크롤을 추가하여 웹 버전 디자인을 강제로 보여줌 */
-    }
-
-    /* 필요에 따라 웹 버전에 맞게 레이아웃 수정 */
-    header, section, footer {
-        max-width: 1200px; /* 웹 버전의 최대 너비를 설정 */
-        margin: 0 auto;
-    }
-}
-
 body {
 
     /* 스타일링: 기술 항목 이미지 */
