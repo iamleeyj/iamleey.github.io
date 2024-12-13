@@ -60,3 +60,4 @@ window.onclick = function(event) {
         modal.style.display = "none"; // 모달 창을 숨김
     }
 }
+
