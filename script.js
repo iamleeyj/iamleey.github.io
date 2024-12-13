@@ -61,3 +61,9 @@ window.onclick = function(event) {
     }
 }
 
+if (window.innerWidth <= 768) {
+  // 모바일 화면에서 웹 버전으로 강제 이동
+  document.documentElement.style.fontSize = "16px";  // 기본 웹 크기로 설정
+  document.body.style.overflowX = "auto"; // 모바일에서 가로 스크롤을 추가
+}
+

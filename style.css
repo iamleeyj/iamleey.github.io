@@ -289,16 +289,18 @@ footer a:hover {
     border-radius: 5px;
 }
 
+/* 메뉴 항목을 세로로 나열 */
 .navbar ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px;
+    flex-direction: column; /* 세로로 나열 */
+    gap: 20px; /* 항목 간 간격 */
 }
 
 .navbar li {
-    display: inline;
+    display: block; /* 블록 요소로 설정하여 세로로 나열 */
 }
 
 .navbar a {
@@ -306,11 +308,14 @@ footer a:hover {
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
+    display: block; /* 링크를 블록으로 만들어서 세로로 확장 */
+    padding: 10px 15px;
 }
 
 .navbar a:hover {
     color: #ffcc00;
 }
+
 
 /* 메뉴 항목 간의 간격 조정 */
 .navbar ul li a {
