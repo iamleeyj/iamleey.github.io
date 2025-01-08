@@ -1,153 +1,276 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>introduction</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Introduction</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@600&display=swap');
+        @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+        @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
+        body {
+            margin: 0;
+            font-family: 'Pretendard', sans-serif;
+            font-size: 14px;
+            background-color: #acdedb;
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #f5bcb6;
+            padding: 15px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 0.9em;
+        }
+
+        header nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .hero {
+            margin-top: 100px;
+            padding: 60px 30px;
+            text-align: center;
+            background-color: rgba(245, 188, 182, 0.3);
+            border-radius: 20px;
+            max-width: 900px;
+            margin: auto;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #f5bcb6;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h2 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 0.9em;
+        }
+
+        .about-section {
+            background-color: rgba(245, 188, 182, 0.3);
+            padding: 50px 20px;
+            margin: 50px auto;
+            border-radius: 20px;
+            max-width: 900px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .about-section p {
+            font-size: 0.95em;
+            text-align: justify;
+        }
+
+        .services-section, .team-section, .testimonials-section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .services-section h2, .team-section h2, .testimonials-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .services-section .service, .team-section .member, .testimonials-section .testimonial {
+            background-color: #f5bcb6;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background-color: #f5bcb6;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8em;
+        }
+
+        .btn {
+            background-color: white;
+            color: #f5bcb6;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #f5bcb6;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            header .logo {
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="img/ansanlogo.png" alt="안산대학교 로고">
-        </div>
-        <h1>안녕하세요,</h1>
-        <h1>저는 leeyj 입니다.</h1>
-        <p>"Turning Ideas into Interactive Experiences"</p>
-
-
-        <!-- 메뉴 바 추가 -->
-        <nav class="navbar">
+        <div class="logo"><i class="fi fi-rr-home"></i> iamLEEYJ</div>
+        <nav>
             <ul>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#other">Other</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact"></a></li>
             </ul>
         </nav>
     </header>
-    
-    <section id="about-me" class="introduction">
-        <h2>About Me</h2>
-        <div class="icons">
-            <!-- profile 아이콘 -->
-            <img src="img/profile_icon.png" alt="Profile 아이콘" class="icon" id="icon-a">
-            <!-- namelogo 아이콘 -->
-            <img src="img/namelogo_icon.png" alt="Name Logo 아이콘" class="icon" id="icon-b">
-          </div>
-        
-          <!-- profile 이미지 확대 -->
-          <div id="overlay-a" class="overlay">
-            <span class="close-btn" id="close-a">&times;</span>
-            <img src="img/profile.png" alt="Profile 이미지" class="expanded-image">
-          </div>
-        
-          <!-- namelogo 이미지 확대 -->
-          <div id="overlay-b" class="overlay">
-            <span class="close-btn" id="close-b">&times;</span>
-            <img src="img/namelogo.png" alt="Name Logo 이미지" class="expanded-image">
-          </div>
-        
-          <script src="script.js"></script>
-          <p>안녕하세요. 저는 웹 퍼블리셔를 목표로, 디자인과 사용자 경험을 동시에 고려한 웹 개발을 준비하고 있는 컴퓨터공학과 학생입니다. 고등학교 시절부터 디자인에 대한 열정을 가지고 졸업앨범 디자인 및 온라인 커뮤니티 표지 디자인 등을 통해 실무 경험을 쌓았습니다. 대학에 진학한 후에는 학과 홍보 동아리 활동을 통해 Miricanvus를 활용한 포스터 및 안내문 디자인을 진행하면서 실용적인 디자인 능력을 향상시켰습니다.</p>
 
-          <p>대학에서 전공을 공부하며, HTML, CSS, JavaScript 등을 활용한 웹 디자인 프로젝트와 Java를 활용한 모바일 플랫폼 개발 프로젝트를 통해 프론트엔드 기술을 익혔습니다. 또한, MySQL과 MariaDB를 활용한 데이터베이스 설계 및 구축, Java와 Python을 이용한 실습을 통해 백엔드 지식을 쌓았습니다.</p>
-          
-          <p>현재는 학교와 병행하며 '대학일자리플러스센터'에서 근로장학생으로서 홍보 디자인 및 사무 행정 업무를 맡고 있으며, Miricanvus로 실제 포스터와 리플렛을 제작하고, 한글/엑셀 등의 문서 작업을 통해 실무 경험을 쌓고 있습니다.</p>
-          
+    <section id="home" class="hero">
+        <h1>Welcome to iamLEEYJ</h1>
+        <p>A passionate computer science student at Ansan University, exploring the intersection of technology and design.</p>
+        <button class="btn">Discover More</button>
     </section>
 
-    <section id="skills" class="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Frontend</h3>
-                <!-- Frontend image instead of text -->
-                <img src="img/front.png" alt="Frontend Skills" class="skill-image" onclick="openModal('front.png')" />
-            </div>
-            <div class="skill-category">
-                <h3>Backend</h3>
-                <!-- Backend image instead of text -->
-                <img src="img/back.png" alt="Backend Skills" class="skill-image" onclick="openModal('back.png')" />
-            </div>
-            <div class="skill-category">
-                <h3>Tools</h3>
-                <!-- Tools image instead of text -->
-                <img src="img/tool.png" alt="Tools Skills" class="skill-image" onclick="openModal('tool.png')" />
-            </div>
-            <div class="skill-category">
-                <h3>Design</h3>
-                <!-- Design image instead of text -->
-                <img src="img/design.png" alt="Design Skills" class="skill-image" onclick="openModal('design.png')" />
-            </div>
+    <section id="about" class="about-section">
+        <h2><i class="fi fi-br-search"></i>About Me</h2>
+        <p>I am a computer science student with a focus on UI/UX design and web development. My goal is to create intuitive and impactful digital experiences.</p>
+    </section>
+
+    <section id="services" class="services-section">
+        <h2>My Services</h2>
+        <div class="service">
+            <h3>Web Design</h3>
+            <p>Crafting beautiful, user-friendly websites with a focus on both design and functionality.</p>
+        </div>
+        <div class="service">
+            <h3>UI/UX Design</h3>
+            <p>Creating seamless and engaging user experiences through thoughtful UI/UX design.</p>
+        </div>
+        <div class="service">
+            <h3>Development</h3>
+            <p>Building responsive and robust web applications using modern technologies and frameworks.</p>
         </div>
     </section>
 
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
-
-        <ul>
-            <li><strong>프론트엔드</strong>: 반응형 포트폴리오 개발 (HTML, CSS, JavaScript, React.js)</li>
-            <div class="fronts">
-                <!-- profile 아이콘 -->
-                <img src="img/profile_icon.png" alt="" class="front icon" id="front-a">
-              </div>
-            <li><strong>백엔드</strong>: 학습 플랫폼 통합앱 개발</li>
-            <div class="backs">
-                <!-- namelogo 아이콘 -->
-                <img src="img/namelogo_icon.png" alt="back icon" class="back" id="back-a">
-              </div>
-        </ul>
-    </section>
-
-    <section id="portfolio"class="portfolio">
-        <h2>Portfolio</h2>
-        <ul>
-            <li><strong>1.홍보물 디자인</strong>: 채용공고 카드뉴스 이미지 (학과별 총 19가지), 센터 소개 리플렛 (AI 이미지 및 실물 이미지), 홍보물 메모지</li>
-            <div class="portfolio-1">
-                <img src="img/포스터.png" alt="홍보물 1">
-                <img src="img/채용1.png" alt="홍보물 2">
-                <img src="img/리플렛1.png" alt="홍보물 3">
-            </div>
-        </ul>
-        <ul>
-            <li><strong>2.포스터 디자인</strong>: 프로그램/공모전 포스터</li>
-            <div class="portfolio-2">
-                <img src="img/포스터.png" alt="포스터 1">
-                <img src="img/채용1.png" alt="포스터 2">
-            </div>
-        </ul>
-        <ul>
-            <li><strong>3.디지털 디자인</strong>: 채용공고 카드뉴스 이미지 (학과별 총 19가지), 센터 소개 리플렛 (AI 이미지 및 실물 이미지), 홍보물 메모지</li>
-            <div class="portfolio-3">
-                <img src="img/포스터.png" alt="홍보물 1">
-                <img src="img/채용1.png" alt="홍보물 2">
-                <img src="img/리플렛1.png" alt="홍보물 3">
-            </div>
-        </ul>
-        <ul>
-            <li><strong>4.영상 작업</strong>: 홍보영상 제작 (공모전 전체 1위 대상 수상, 뉴스 보도 포함), 영상 편집: 촬영한 영상을 편집하여 홍보용으로 활용.</li>
-            <div class="portfolio-4">
-                <img src="img/포스터.png" alt="포스터 1">
-                <img src="img/채용1.png" alt="포스터 2">
-            </div>
-        </ul>
-        <p><a href="https://job.ansan.ac.kr" target="_blank">대학일자리플러스센터 바로가기</a></p>
-    </section>
-
-    <section id="other" class="other">
-        <h2>Other</h2>
-        <div class="others">    
-            <h3>Frontend</h3>
+    <section id="portfolio" class="content">
+        <div class="card">
+            <h2>Project 1</h2>
+            <p>A web application designed to simplify tasks and improve user interaction with intuitive features.</p>
+        </div>
+        <div class="card">
+            <h2>Project 2</h2>
+            <p>A mobile app that integrates user feedback to create a more engaging and personalized experience.</p>
+        </div>
+        <div class="card">
+            <h2>Project 3</h2>
+            <p>A comprehensive website that showcases my web design and development skills through various projects.</p>
         </div>
     </section>
 
-    <footer>
-        <p>연락처: [your.email@example.com]</p>
-        <p>GitHub: <a href="https://github.com/iamleeyj" target="_blank">github.com/yourgithub</a></p>
-        <p>LinkedIn: <a href="https://github.com/iamleeyj" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <section id="team" class="team-section">
+        <h2>My Journey</h2>
+        <div class="member">
+            <h3>Education</h3>
+            <p>Currently pursuing a degree in Computer Science at Ansan University.</p>
+        </div>
+        <div class="member">
+            <h3>Experience</h3>
+            <p>Interned as a web developer, honing skills in UI/UX design and full-stack development.</p>
+        </div>
+        <div class="member">
+            <h3>Skills</h3>
+            <p>Proficient in HTML/CSS, JavaScript, Java, Python, and MySQL. Passionate about design and user-centered development.</p>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <h2>What People Say</h2>
+        <div class="testimonial">
+            <p>"A dedicated and creative individual, always pushing the boundaries of design and technology." - Professor X</p>
+        </div>
+        <div class="testimonial">
+            <p>"Consistently produces high-quality work, with attention to detail and a passion for learning." - Mentor Y</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        &copy; 2024 iamLEEYJ. All rights reserved. | <a href="#">Privacy Policy</a>
     </footer>
 </body>
-
 </html>
