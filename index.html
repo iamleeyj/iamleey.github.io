@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" portfolio-part="width=device-width, initial-scale=1.0">
     <title>Introduction</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@600&display=swap');
@@ -24,7 +24,7 @@
             top: 0;
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-portfolio-part: space-between;
             align-items: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
@@ -60,7 +60,7 @@
             background-color: rgba(255, 255, 255, 0.3);
         }
 
-        .hero {
+        .home-part {
             margin-top: 100px;
             padding: 60px 30px;
             text-align: center;
@@ -71,17 +71,17 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
 
-        .hero h1 {
+        .home-part h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
         }
 
-        .hero p {
+        .home-part p {
             font-size: 1em;
             margin-bottom: 20px;
         }
 
-        .content {
+        .portfolio-part {
             padding: 50px 20px;
             max-width: 1200px;
             margin: auto;
@@ -90,7 +90,7 @@
             gap: 30px;
         }
 
-        .card {
+        .project {
             background-color: #f5bcb6;
             padding: 25px;
             border-radius: 15px;
@@ -98,21 +98,21 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .card:hover {
+        .project:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
 
-        .card h2 {
+        .project h2 {
             font-size: 1.3em;
             margin-bottom: 15px;
         }
 
-        .card p {
+        .project p {
             font-size: 0.9em;
         }
 
-        .about-section {
+        .about-part {
             background-color: rgba(245, 188, 182, 0.3);
             padding: 50px 20px;
             margin: 50px auto;
@@ -121,29 +121,29 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
 
-        .about-section h2 {
+        .about-part h2 {
             font-size: 2em;
             margin-bottom: 20px;
             text-align: center;
         }
 
-        .about-section p {
+        .about-part p {
             font-size: 0.95em;
             text-align: justify;
         }
 
-        .services-section, .team-section, .testimonials-section {
+        .favorite-part, .skill-part, .goal-part {
             padding: 50px 20px;
             max-width: 1200px;
             margin: auto;
         }
 
-        .services-section h2, .team-section h2, .testimonials-section h2 {
+        .favorite-part h2, .skill-part h2, .goal-part h2 {
             text-align: center;
             margin-bottom: 20px;
         }
 
-        .services-section .service, .team-section .member, .testimonials-section .testimonial {
+        .favorite-part .favorites, .skill-part .skills, .goal-part .goals {
             background-color: #f5bcb6;
             border-radius: 15px;
             padding: 20px;
@@ -175,7 +175,7 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 {
+            .home-part h1 {
                 font-size: 2em;
             }
 
@@ -192,79 +192,79 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#favorites">Favorite</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#team">Task</a></li>
-                <li><a href="#testimonials">Test</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#goal">Goal</a></li>
                 <li><a href="#contact"></a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
+    <section id="home" class="home-part">
         <h1>Welcome to iamLEEYJ</h1>
         <p>작성 중입니다.</p>
         <button class="btn">Discover More</button>
     </section>
 
-    <section id="about" class="about-section">
+    <section id="about" class="about-part">
         <h2><i class="fi fi-br-search"></i>About Me</h2>
         <p>작성 중입니다.</p>
     </section>
 
-    <section id="services" class="services-section">
-        <h2>My Services</h2>
-        <div class="service">
+    <section id="favorite" class="favorite-part">
+        <h2>My favorite</h2>
+        <div class="favorites">
             <h3>title1</h3>
             <p>작성 중입니다.</p>
         </div>
-        <div class="service">
+        <div class="favorites">
             <h3>title2</h3>
             <p>작성 중입니다.</p>
         </div>
-        <div class="service">
+        <div class="favorites">
             <h3>title3</h3>
             <p>작성 중입니다.</p>
         </div>
     </section>
 
-    <section id="portfolio" class="content">
-        <div class="card">
+    <section id="portfolio" class="portfolio-part">
+        <div class="project">
             <h2>Project 1</h2>
             <p>작성 중입니다.</p>
         </div>
-        <div class="card">
+        <div class="project">
             <h2>Project 2</h2>
             <p>작성 중입니다.</p>
         </div>
-        <div class="card">
+        <div class="project">
             <h2>Project 3</h2>
             <p>작성 중입니다.</p>
         </div>
     </section>
 
-    <section id="team" class="team-section">
+    <section id="skill" class="skill-part">
         <h2>Task</h2>
-        <div class="member">
+        <div class="skills">
             <h3>Title1</h3>
             <p>작성 중입니다.</p>
         </div>
-        <div class="member">
+        <div class="skills">
             <h3>Title2</h3>
             <p>작성 중입니다.</p>
         </div>
-        <div class="member">
+        <div class="skills">
             <h3>Title3</h3>
             <p>작성 중입니다.</p>
         </div>
     </section>
 
-    <section id="testimonials" class="testimonials-section">
+    <section id="goal" class="goal-part">
         <h2>Test</h2>
-        <div class="testimonial">
+        <div class="goals">
             <p>작성 중입니다.</p>
         </div>
-        <div class="testimonial">
+        <div class="goals">
             <p>작성 중입니다.</p>
         </div>
     </section>
